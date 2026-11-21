@@ -21,7 +21,7 @@ GH_TOKEN=$(gh auth token) DRY_RUN=1 METRICS_DIR=/tmp/shame WATCHED_REPO=dawn-car
 ## Where it hears about PRs
 
 - **PR events** (opened, pushed, reviewed, commented on, closed): DAWN's
-  `.github/workflows/shame-bot-forwarder.yml` sends each one here as a
+  `.github/workflows/internal-tools-forwarder.yml` sends each one here as a
   `pr-event` repository_dispatch, trimmed to the fields `shame.mjs` uses:
 
   ```json
@@ -35,7 +35,7 @@ GH_TOKEN=$(gh auth token) DRY_RUN=1 METRICS_DIR=/tmp/shame WATCHED_REPO=dawn-car
   }
   ```
 
-  It needs the `SHAME_DISPATCH_TOKEN` secret in DAWN. Runs whose `repo` isn't
+  It needs the `TOOLS_DISPATCH_TOKEN` secret in DAWN. Runs whose `repo` isn't
   `WATCHED_REPO` (set in the workflow) are refused.
 - **Overdue reviews and idle authors**: an hourly run reads DAWN's open PRs.
   DAWN is public, so this repo's own `GITHUB_TOKEN` can.

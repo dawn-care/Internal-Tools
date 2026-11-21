@@ -153,7 +153,7 @@ async function openPrs() {
 // ---- What happened ----------------------------------------------------------
 
 // The watched repo forwards its PR events as a "pr-event" repository_dispatch
-// (its shame-bot-forwarder.yml), trimmed to the fields used below. Unwraps
+// (its internal-tools-forwarder.yml), trimmed to the fields used below. Unwraps
 // one into the event it was, and passes anything else through.
 function unwrap(name, event) {
   if (name !== "repository_dispatch" || event.action !== "pr-event") return { name, event };

@@ -13,7 +13,7 @@ name: Shame Bot
 #     and sends the result here as a "manual-shame" repository_dispatch.
 #
 # The PRs live in WATCHED_REPO, which forwards its PR events here as a
-# "pr-event" repository_dispatch (its .github/workflows/shame-bot-forwarder.yml).
+# "pr-event" repository_dispatch (its .github/workflows/internal-tools-forwarder.yml).
 # slow_review and idle_author can't be seen in any one event, so they're checked
 # hourly, by reading the watched repo's open PRs (it's public, so this repo's
 # own token can), and shamed again every further 24 hours.
