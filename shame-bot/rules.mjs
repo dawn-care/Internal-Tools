@@ -24,7 +24,7 @@ export const CATEGORIES = {
   deadlines: "Deadlines",
   broke_something: "Broke something",
   communication: "Communication",
-  other: "Other",
+  other: "Something else",
 };
 
 // The category each automatic shame counts under.
