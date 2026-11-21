@@ -1,0 +1,14 @@
+{
+  "categories": {
+    "reviews": "Reviews",
+    "follow_through": "Follow-through",
+    "pr_size": "PR size",
+    "sleep": "Sleep",
+    "meetings": "Meetings",
+    "deadlines": "Deadlines",
+    "broke_something": "Broke something",
+    "communication": "Communication",
+    "other": "Other"
+  },
+  "shames": []
+}
