@@ -10,5 +10,14 @@
     "communication": "Communication",
     "other": "Something else"
   },
-  "shames": []
+  "shames": [
+    {
+      "at": "2026-11-21T23:19:33.127Z",
+      "login": "jmd9268",
+      "category": "follow_through",
+      "type": "idle_author",
+      "pr": 477
+    }
+  ],
+  "updatedAt": "2026-11-21T23:19:33.127Z"
 }
