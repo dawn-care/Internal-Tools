@@ -1,4 +1,4 @@
-# InternalTools
+# Internal-Tools
 
 The D.A.W.N. team's internal bots and tools that aren't part of the product or
 its CI. Each one lives in its own folder, with its workflow in

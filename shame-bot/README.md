@@ -52,7 +52,7 @@ Every shame that has happened, one entry each, oldest first. It only grows:
 changing a rule never changes past shames. Like DAWN's `pull-requests.json`, it holds
 facts, and the website does the counting (by person, by category, over time).
 Read it from
-`https://raw.githubusercontent.com/dawn-care/InternalTools/metrics/metrics/shame.json`.
+`https://raw.githubusercontent.com/dawn-care/Internal-Tools/metrics/metrics/shame.json`.
 
 ```json
 {
@@ -93,8 +93,8 @@ bot posts with can't receive anything. Once a `/shame` has enough
 endorsements, the website sends it here:
 
 ```http
-POST https://api.github.com/repos/dawn-care/InternalTools/dispatches
-Authorization: Bearer <token with Contents: write on dawn-care/InternalTools>
+POST https://api.github.com/repos/dawn-care/Internal-Tools/dispatches
+Authorization: Bearer <token with Contents: write on dawn-care/Internal-Tools>
 
 {
   "event_type": "manual-shame",
