@@ -24,7 +24,19 @@
       "category": "reviews",
       "type": "slow_review",
       "pr": 488
+    },
+    {
+      "at": "2026-11-22T18:34:54.966Z",
+      "login": "azun2099",
+      "category": "sleep",
+      "type": "manual",
+      "reason": "woke up late as heeellll",
+      "by": "ashtonius_",
+      "endorsedBy": [
+        "saltyypanda",
+        "jaydoody9268"
+      ]
     }
   ],
-  "updatedAt": "2026-11-22T06:51:33.471Z"
+  "updatedAt": "2026-11-22T18:34:54.966Z"
 }
