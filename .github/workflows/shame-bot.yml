@@ -55,8 +55,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           METRICS_DIR: ${{ github.workspace }}/metrics-branch
+          # The shame channel's webhook. Not DISCORD_WEBHOOK_URL: that's the PR channel.
           DISCORD_SHAME_WEBHOOK_URL: ${{ secrets.DISCORD_SHAME_WEBHOOK_URL }}
-          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_USER_MAP: ${{ secrets.DISCORD_USER_MAP }}
         run: |
           git config user.name "github-actions[bot]"

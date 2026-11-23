@@ -9,7 +9,7 @@
 //   GH_TOKEN, GITHUB_EVENT_NAME, GITHUB_EVENT_PATH  (set by Actions)
 //   WATCHED_REPO            the repo whose PRs are judged, like dawn-care/DAWN
 //   METRICS_DIR             a checkout of the metrics branch
-//   DISCORD_SHAME_WEBHOOK_URL  (falls back to DISCORD_WEBHOOK_URL)
+//   DISCORD_SHAME_WEBHOOK_URL  the shame channel's webhook (never the PR channel's)
 //   DISCORD_USER_MAP        JSON of GitHub login -> Discord user ID
 //   DRY_RUN=1               print what would happen; no commit, push or post
 
@@ -36,7 +36,10 @@ if (!REPO?.includes("/")) throw new Error("WATCHED_REPO must be set, like dawn-c
 const [OWNER, NAME] = REPO.split("/");
 const DRY_RUN = env.DRY_RUN === "1";
 const METRICS_DIR = env.METRICS_DIR;
-const WEBHOOK = env.DISCORD_SHAME_WEBHOOK_URL || env.DISCORD_WEBHOOK_URL;
+// Only the shame channel's webhook: falling back to DISCORD_WEBHOOK_URL (the PR
+// notifications' channel) once posted shame there whenever this was unset.
+const WEBHOOK = env.DISCORD_SHAME_WEBHOOK_URL;
+if (!WEBHOOK && !DRY_RUN) throw new Error("DISCORD_SHAME_WEBHOOK_URL must be set (the shame channel's webhook)");
 const USER_MAP = JSON.parse(env.DISCORD_USER_MAP || "{}");
 const LOG_FILE = join(METRICS_DIR, "metrics", "shame.json");
 const STATE_FILE = join(METRICS_DIR, "metrics", "shame-state.json");
@@ -259,7 +262,14 @@ async function fromEvent(name, event) {
 
 // ---- Messages ---------------------------------------------------------------
 
-const mention = (login) => (USER_MAP[login] ? `<@${USER_MAP[login]}>` : login);
+// DISCORD_USER_MAP is keyed by GitHub login. A login missing from it can't be
+// pinged, so say so in the run's log (that's how a map keyed by Discord
+// usernames shows up).
+function mention(login) {
+  if (USER_MAP[login]) return `<@${USER_MAP[login]}>`;
+  console.log(`::warning::${login} isn't a key in DISCORD_USER_MAP (GitHub login -> Discord user ID), so they weren't pinged`);
+  return login;
+}
 const pick = (options) => options[Math.floor(Math.random() * options.length)];
 // Escape [ and ] so a title can't break the markdown link
 const link = (pr) => `[${pr.title.replace(/[[\]]/g, "\\$&")}](${pr.url})`;

@@ -42,9 +42,17 @@ GH_TOKEN=$(gh auth token) DRY_RUN=1 METRICS_DIR=/tmp/shame WATCHED_REPO=dawn-car
 - **`/shame`**: the team website sends a `manual-shame` repository_dispatch
   (below).
 
-Secrets here: `DISCORD_WEBHOOK_URL` (or `DISCORD_SHAME_WEBHOOK_URL` for a
-separate channel) and `DISCORD_USER_MAP` (JSON of GitHub login to Discord user
-ID, the same as DAWN's).
+Secrets here:
+
+- `DISCORD_SHAME_WEBHOOK_URL`: a webhook for the shame channel. The bot fails
+  without it rather than post anywhere else (`DISCORD_WEBHOOK_URL` is the PR
+  notifications' channel).
+- `DISCORD_USER_MAP`: JSON of **GitHub login** to Discord user ID, like
+  `{"ha4716": "123456789012345678"}`. Not Discord usernames: every shame is
+  logged under the GitHub login, so the website can match it to the team, and
+  automatic shames only know GitHub logins. The PR notifications and the team
+  website's `DISCORD_USER_MAP` use the same map. A run warns about any login it
+  couldn't ping.
 
 ## `metrics/shame.json`
 
