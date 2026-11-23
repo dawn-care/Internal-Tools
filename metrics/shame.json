@@ -43,7 +43,19 @@
       "category": "follow_through",
       "type": "idle_author",
       "pr": 477
+    },
+    {
+      "at": "2026-11-23T02:30:55.474Z",
+      "login": "ashtonius_",
+      "category": "other",
+      "type": "manual",
+      "reason": "NEEDS TO EAT FOOD",
+      "by": "saltyypanda",
+      "endorsedBy": [
+        "jaydoody9268",
+        "azun2099"
+      ]
     }
   ],
-  "updatedAt": "2026-11-22T21:47:17.148Z"
+  "updatedAt": "2026-11-23T02:30:55.474Z"
 }
