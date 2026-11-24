@@ -112,7 +112,14 @@
       "category": "reviews",
       "type": "slow_review",
       "pr": 488
+    },
+    {
+      "at": "2026-11-24T21:14:10.088Z",
+      "login": "jmd9268",
+      "category": "follow_through",
+      "type": "idle_author",
+      "pr": 477
     }
   ],
-  "updatedAt": "2026-11-24T10:57:26.610Z"
+  "updatedAt": "2026-11-24T21:14:10.088Z"
 }
