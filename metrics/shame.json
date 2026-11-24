@@ -81,7 +81,19 @@
         "AJBruno23",
         "ha4716"
       ]
+    },
+    {
+      "at": "2026-11-24T01:07:13.900Z",
+      "login": "ha4716",
+      "category": "broke_something",
+      "type": "manual",
+      "reason": "cant endorse our own shames",
+      "by": "saltyypanda",
+      "endorsedBy": [
+        "AJBruno23",
+        "dgh4572"
+      ]
     }
   ],
-  "updatedAt": "2026-11-24T01:02:34.444Z"
+  "updatedAt": "2026-11-24T01:07:13.900Z"
 }
