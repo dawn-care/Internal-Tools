@@ -105,7 +105,14 @@
         "AJBruno23",
         "ashton-michelstein"
       ]
+    },
+    {
+      "at": "2026-11-24T10:57:26.610Z",
+      "login": "ha4716",
+      "category": "reviews",
+      "type": "slow_review",
+      "pr": 488
     }
   ],
-  "updatedAt": "2026-11-24T01:11:15.526Z"
+  "updatedAt": "2026-11-24T10:57:26.610Z"
 }
