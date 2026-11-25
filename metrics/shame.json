@@ -126,7 +126,14 @@
       "category": "reviews",
       "type": "slow_review",
       "pr": 488
+    },
+    {
+      "at": "2026-11-25T23:38:22.874Z",
+      "login": "jmd9268",
+      "category": "follow_through",
+      "type": "idle_author",
+      "pr": 477
     }
   ],
-  "updatedAt": "2026-11-25T14:36:37.885Z"
+  "updatedAt": "2026-11-25T23:38:22.874Z"
 }
