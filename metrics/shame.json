@@ -119,7 +119,14 @@
       "category": "follow_through",
       "type": "idle_author",
       "pr": 477
+    },
+    {
+      "at": "2026-11-25T14:36:37.885Z",
+      "login": "ha4716",
+      "category": "reviews",
+      "type": "slow_review",
+      "pr": 488
     }
   ],
-  "updatedAt": "2026-11-24T21:14:10.088Z"
+  "updatedAt": "2026-11-25T14:36:37.885Z"
 }
