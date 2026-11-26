@@ -133,7 +133,14 @@
       "category": "follow_through",
       "type": "idle_author",
       "pr": 477
+    },
+    {
+      "at": "2026-11-26T19:02:23.877Z",
+      "login": "jmd9268",
+      "category": "follow_through",
+      "type": "idle_author",
+      "pr": 477
     }
   ],
-  "updatedAt": "2026-11-25T23:38:22.874Z"
+  "updatedAt": "2026-11-26T19:02:23.877Z"
 }
