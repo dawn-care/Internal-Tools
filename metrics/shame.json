@@ -147,7 +147,14 @@
       "category": "follow_through",
       "type": "idle_author",
       "pr": 477
+    },
+    {
+      "at": "2026-11-28T02:42:50.777Z",
+      "login": "ashton-michelstein",
+      "category": "follow_through",
+      "type": "idle_author",
+      "pr": 488
     }
   ],
-  "updatedAt": "2026-11-27T19:59:17.318Z"
+  "updatedAt": "2026-11-28T02:42:50.777Z"
 }
